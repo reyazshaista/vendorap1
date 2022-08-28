@@ -81,6 +81,7 @@ const initialFormState = { requestnumber:'',
   vendorgrouping: '',
 
   image: '' }
+  console.log("shaista")
 
 function App() {
   const [vendors, setVendors] = useState([]);
