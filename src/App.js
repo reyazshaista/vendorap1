@@ -22,7 +22,7 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listVendors } from './graphql/queries';
 import {  createVendor as createVendorMutation, deleteVendor as deleteVendorMutation } from './graphql/mutations';
 
-const initialFormState = { requestnumber: Int!
+const initialFormState = { requestnumber:'',
 
   requestedoperation: '',
 
