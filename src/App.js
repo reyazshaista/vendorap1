@@ -93,7 +93,7 @@ function App() {
 
   async function fetchVendors() {
     const apiData = await API.graphql({ query: listVendors });
-    setNotes(apiData.data.listVendors.items);
+    setVendors(apiData.data.listVendors.items);
   }
  async function createVendor() {
      
