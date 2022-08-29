@@ -33,7 +33,7 @@ const initialFormState = { requestnumber:'', requestedoperation: '', status: '',
   streetname: '', blockkey4payment: '',industrykey: '', vendortype: '', customernumber: '', contacttitle: '',
 
   vendorgrouping: '', image: '' }
-  console.log("shaista")
+  
 
 function App() {
   const [vendors, setVendors] = useState([]);
@@ -61,7 +61,7 @@ function App() {
  
  || !formData.reconcilliationaccount || !formData.streetname || !formData.blockkey4payment ||!formData.industrykey
 
- ||!formData.vendortype || !formData.forcustomernumber || !formData.contacttitle ||!formData.vendorgrouping || !formData.image ) return;
+ || !formData.vendortype || !formData.forcustomernumber || !formData.contacttitle ||!formData.vendorgrouping || !formData.image ) return;
  
   await API.graphql({ query: createVendorMutation, variables: { input: formData } });
     setVendors([ ...vendors,formData]);
@@ -69,6 +69,8 @@ function App() {
   }
 
  
+ console.log("shaista");
+  console.log(API);
      
      
     
