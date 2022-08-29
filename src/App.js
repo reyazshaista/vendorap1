@@ -69,8 +69,7 @@ function App() {
   }
 
  
- console.log("shaista");
-  console.log(API);
+
      
      
     
