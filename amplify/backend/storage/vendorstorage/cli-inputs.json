@@ -1,0 +1,14 @@
+{
+  "resourceName": "vendorstorage",
+  "policyUUID": "977cc560",
+  "bucketName": "vendorap1074a4a69976a42fdb3ad0a8d6f209621",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
