@@ -22,65 +22,17 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listVendors } from './graphql/queries';
 import {  createVendor as createVendorMutation, deleteVendor as deleteVendorMutation } from './graphql/mutations';
 
-const initialFormState = { requestnumber:'',
+const initialFormState = { requestnumber:'', requestedoperation: '', status: '', vendorname: '',  vendorfirstname: '',
 
-  requestedoperation: '',
+  vendorfullname: '',addressline1: '',  postalcode: '', cityname: '', country: '',  region: '',  emailaddress: '',
 
-  status: '',
+  languagekey: '', thirdpartysupplieraccgrp: '',  purchasingorg: '', pocurrency: '', paymentkeyterms: '',
 
-  vendorname: '',
+  incotermspart1: '',purchasinggroup: '',  planneddeliverytimedays: '',  companycode: '',reconcilliationaccount: '',
 
-  vendorfirstname: '',
+  streetname: '', blockkey4payment: '',industrykey: '', vendortype: '', customernumber: '', contacttitle: '',
 
-  vendorfullname: '',
-
-  addressline1: '',
-
-  postalcode: '',
-
-  cityname: '',
-
-  country: '',
-
-  region: '',
-
-  emailaddress: '',
-
-  languagekey: '',
-
-  thirdpartysupplieraccgrp: '',
-
-  purchasingorg: '',
-
-  pocurrency: '',
-
-  paymentkeyterms: '',
-
-  incotermspart1: '',
-
-  purchasinggroup: '',
-
-  planneddeliverytimedays: '',
-
-  companycode: '',
-
-  reconcilliationaccount: '',
-
-  streetname: '',
-
-  blockkey4payment: '',
-
-  industrykey: '',
-
-  vendortype: '',
-
-  customernumber: '',
-
-  contacttitle: '',
-
-  vendorgrouping: '',
-
-  image: '' }
+  vendorgrouping: '', image: '' }
   console.log("shaista")
 
 function App() {
@@ -105,7 +57,7 @@ function App() {
 
   !formData.thirdpartysupplieraccgrp) return;
   await API.graphql({ query: createVendorMutation, variables: { input: formData } });
-    setNotes([ ...vendors,formData]);
+    setVendors([ ...vendors,formData]);
     setFormData(initialFormState);
   }
 
@@ -125,7 +77,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Notes App</h1>
+      <h1>My Vendor App</h1>
       <input
         onChange={e => setFormData({ ...formData, 'requestedoperation': e.target.value})}
         placeholder="request name"
@@ -136,7 +88,7 @@ function App() {
         placeholder="Note description"
         value={formData.status}
       />
-      <button onClick={createNote}>Create Note</button>
+      <button onClick={createVendor}>Create Vendor</button>
       
       <AmplifySignOut />
     </div>
