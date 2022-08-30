@@ -242,7 +242,7 @@ async function createVendor() {
       />
       <button onClick={createVendor}>Create Vendor</button>
       
-      <AmplifySignOut />
+      
     </div>
   );
 }
