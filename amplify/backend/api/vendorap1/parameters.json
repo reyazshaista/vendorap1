@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "vendorap1",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}
