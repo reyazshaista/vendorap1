@@ -453,7 +453,9 @@ const [vendors, setVendors] = useState([]);
               <button onClick={() => deleteVendor(vendor)}>Delete vendor</button>
             </div>
           ))
+          
         }
+        console.log("show"+" "+vendor);
       </div>
       <Authenticator>
                               {({ signOut, user }) => (
