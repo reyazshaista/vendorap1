@@ -447,15 +447,16 @@ const [vendors, setVendors] = useState([]);
       <div style={{marginBottom: 30}}>
         {
           vendors.map(vendor => (
+          
             <div key={vendor.id || vendor.vendorname}>
-              <h2>{vendor.vendorname}</h2>
+              <h2>{vendor.vendorname}bcnbm n</h2>
               <p>{vendor.status}</p>
               <button onClick={() => deleteVendor(vendor)}>Delete vendor</button>
             </div>
           ))
-          
+           
         }
-        console.log("show"+" "+vendor);
+       
       </div>
       <Authenticator>
                               {({ signOut, user }) => (
