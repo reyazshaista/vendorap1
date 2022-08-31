@@ -451,6 +451,9 @@ const [vendors, setVendors] = useState([]);
             <div key={vendor.id || vendor.vendorname}>
               <h2>{vendor.vendorname}bcnbm n</h2>
               <p>{vendor.status}</p>
+              <p>{vendor.emailaddress}</p>
+              <p>{vendor.addressline1}</p>
+              
               <button onClick={() => deleteVendor(vendor)}>Delete vendor</button>
             </div>
           ))
